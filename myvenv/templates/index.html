@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>Жалкая пародия склонятора слов</title>
+  <link rel="stylesheet" href="static/hf.css"/>
+ </head>
+ <body>
+     {% block body %}
+    </div><form method="post">
+        <table>
+            <tr><td>Слова:</td><td> <input name='word' type='TEXT' width="100" height="100"><td></tr>
+        </table>
+        <p> <input value='Do it!' type = 'submit'> </p>
+    </form>
+    <form method="POST" >
+        <table>
+            <tr>
+                <td>Количество:</td><td>{{count}}<td>
+            </tr>
+         </table>
+         <table>
+            <tr>
+                <td>Ответ:{% for result in the_result %}
+                            {{result}}<br>
+                          {% endfor %}</td>
+            </tr>
+        </table>
+    </form> 
+     {% endblock %}
+
+  
+ </body>
+</html>
